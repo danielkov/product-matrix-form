@@ -1,4 +1,9 @@
 import React, { useCallback } from 'react';
+import styled from "styled-components";
+
+const Input = styled.input`
+margin-right: 12px;
+`;
 
 export type StepProps = {
     index: number,
@@ -19,8 +24,8 @@ export default ({ index, question, options, state, setState }: StepProps) => {
         <h3>{question}</h3>
         {options.map((option, i) => (
             <div key={option}>
-                <label htmlFor={`${index}`}>
-                    <input type="radio" name={`${index}`} value={i} onChange={e => changeValue(parseInt(e.target.value, 10))} />
+                <label htmlFor={`radio-${index}-${i}`}>
+                    <Input type="radio" name={`${index}`} value={i} onChange={e => changeValue(parseInt(e.target.value, 10))} id={`radio-${index}-${i}`}/>
                     {option}
                 </label>
             </div>

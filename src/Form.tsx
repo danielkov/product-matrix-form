@@ -9,6 +9,7 @@ const Form = styled.form`
     font-style: normal;
     color: #000;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 16px;
 `;
 
 type FormProps = { children: any, onChange: any }
