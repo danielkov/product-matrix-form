@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import styled from "styled-components";
 
 const Input = styled.input`
-margin-right: 12px;
+margin-right: 12px !important;
 `;
 
 export type StepProps = {
